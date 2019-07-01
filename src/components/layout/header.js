@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import Logo from "../../favicon.png";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
 export class header extends Component {
   state = {
-    backgroundColor: "rgba(0,0,0,0)"
+    backgroundColor: "rgba(0,0,0,0)",
+    color: "#fff"
+  };
+
+  static propTypes = {
+    color: PropTypes.string
   };
 
   listenScrollEvent = e => {
@@ -23,8 +29,11 @@ export class header extends Component {
     return (
       <div className="sticky top-0 z-40">
         <div
-          className="flex justify-between items-center text-white z-40"
-          style={{ backgroundColor: this.state.backgroundColor }}
+          className="flex justify-between items-center z-40"
+          style={{
+            backgroundColor: this.state.backgroundColor,
+            color: this.props.color
+          }}
         >
           <Link to="/">
             <img
@@ -41,7 +50,7 @@ export class header extends Component {
             <Link to="/calendar" className="z-40">
               <li className="mx-2 cursor-pointer">Calendar</li>
             </Link>
-            <Link to="/" className="z-40">
+            <Link to="/mapShuttle" className="z-40">
               <li className="mx-2 cursor-pointer">Map & Shuttle</li>
             </Link>
             <Link to="/" className="z-40">

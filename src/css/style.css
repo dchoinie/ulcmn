@@ -24,7 +24,9 @@ h6,
 p,
 ul,
 li,
-a {
+a,
+div,
+table {
   font-family: "Muli", sans-serif;
 }
 

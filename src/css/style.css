@@ -11,6 +11,23 @@
  */
 @tailwind base;
 
+@font-face {
+  font-family: "Muli", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  font-family: "Muli", sans-serif;
+}
+
 /**
  * This injects any component classes registered by plugins.
  *
@@ -60,3 +77,8 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+*,
+html,
+body {
+  box-sizing: border-box;
+}

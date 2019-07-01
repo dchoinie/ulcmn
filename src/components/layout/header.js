@@ -26,42 +26,44 @@ export class header extends Component {
           className="flex justify-between items-center text-white z-40"
           style={{ backgroundColor: this.state.backgroundColor }}
         >
-          <img
-            src={Logo}
-            alt=""
-            style={{ maxWidth: "50px" }}
-            className="ml-12 my-2 z-40"
-          />
+          <Link to="/">
+            <img
+              src={Logo}
+              alt=""
+              style={{ maxWidth: "50px" }}
+              className="ml-12 my-2 z-40"
+            />
+          </Link>
           <ul className="flex mr-12">
             <Link to="/" className="z-40">
-              <li className="mx-2">About ULC</li>
+              <li className="mx-2 cursor-pointer">About ULC</li>
+            </Link>
+            <Link to="/calendar" className="z-40">
+              <li className="mx-2 cursor-pointer">Calendar</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Calendar</li>
+              <li className="mx-2 cursor-pointer">Map & Shuttle</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Map & Shuttle</li>
+              <li className="mx-2 cursor-pointer">Support</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Support</li>
+              <li className="mx-2 cursor-pointer">Resources</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Resources</li>
+              <li className="mx-2 cursor-pointer">Library</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Library</li>
+              <li className="mx-2 cursor-pointer">Construction</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Construction</li>
+              <li className="mx-2 cursor-pointer">Blog</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Blog</li>
+              <li className="mx-2 cursor-pointer">Directory</li>
             </Link>
             <Link to="/" className="z-40">
-              <li className="mx-2">Directory</li>
-            </Link>
-            <Link to="/" className="z-40">
-              <li className="mx-2">Contact</li>
+              <li className="mx-2 cursor-pointer">Contact</li>
             </Link>
           </ul>
         </div>

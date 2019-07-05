@@ -27,16 +27,18 @@ export default () => {
     }
   `);
   return (
-    <div className="container mx-auto my-16 text-center px-4">
+    <div className="container mx-auto py-24 text-center px-4">
       <h2 className="text-3xl md:text-6xl font-black">Worship With Us</h2>
       <img src={Logo} className="mx-auto my-4" style={{ maxWidth: "50px" }} />
-      <h2 className="text-3xl font-bold">{data.site.siteMetadata.title}</h2>
+      <h2 className="text-xl md:text-3xl font-bold">
+        {data.site.siteMetadata.title}
+      </h2>
       <h4 className="text-xl  text-red-700">
         {data.site.siteMetadata.description}
       </h4>
-      <h4 className="text-xl">{data.site.siteMetadata.location}</h4>
-      <h4 className="text-xl">{data.site.siteMetadata.address}</h4>
-      <h4 className="text-xl">{data.site.siteMetadata.time}</h4>
+      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.location}</h4>
+      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.address}</h4>
+      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.time}</h4>
     </div>
   );
 };

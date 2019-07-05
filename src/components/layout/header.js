@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 
 export class header extends Component {
   state = {
-    backgroundColor: "rgba(0,0,0,0)",
-    color: "#fff"
+    backgroundColor: "rgba(0,0,0,0)"
   };
 
   static propTypes = {
@@ -15,7 +14,7 @@ export class header extends Component {
 
   listenScrollEvent = e => {
     if (window.scrollY > 50) {
-      this.setState({ backgroundColor: "rgba(0,0,0,0.5)" });
+      this.setState({ backgroundColor: "rgba(0,0,0,0.2)" });
     } else {
       this.setState({ backgroundColor: "rgba(0,0,0,0)" });
     }
@@ -53,25 +52,26 @@ export class header extends Component {
             <Link to="/mapShuttle" className="z-40">
               <li className="mx-2 cursor-pointer">Map & Shuttle</li>
             </Link>
-            <Link to="/" className="z-40">
+            <Link to="/support" className="z-40">
               <li className="mx-2 cursor-pointer">Support</li>
             </Link>
-            <Link to="/" className="z-40">
+            <Link to="/resources" className="z-40">
               <li className="mx-2 cursor-pointer">Resources</li>
             </Link>
-            <Link to="/" className="z-40">
+            <Link to="/library" className="z-40">
               <li className="mx-2 cursor-pointer">Library</li>
             </Link>
-            <Link to="/" className="z-40">
+            <Link to="/construction" className="z-40">
               <li className="mx-2 cursor-pointer">Construction</li>
             </Link>
-            <Link to="/" className="z-40">
-              <li className="mx-2 cursor-pointer">Blog</li>
-            </Link>
-            <Link to="/" className="z-40">
+            <a
+              href="https://members.instantchurchdirectory.com/"
+              className="z-40"
+              target="_blank"
+            >
               <li className="mx-2 cursor-pointer">Directory</li>
-            </Link>
-            <Link to="/" className="z-40">
+            </a>
+            <Link to="/contact" className="z-40">
               <li className="mx-2 cursor-pointer">Contact</li>
             </Link>
           </ul>

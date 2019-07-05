@@ -18,31 +18,26 @@ export default () => {
         siteMetadata {
           title
           description
+          address
+          time
         }
       }
     }
   `);
   return (
-    <div className="text-right" style={{ zIndex: "1", marginTop: "-66px" }}>
+    <div className="relative" style={{ zIndex: "1", marginTop: "-66px" }}>
       <Img
         fluid={data.file.childImageSharp.fluid}
         style={{ height: "100vh" }}
       />
       <div
-        className="absolute px-12 text-white"
-        style={{
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "100%"
-        }}
+        className="absolute text-white text-right px-12"
+        style={{ top: "calc(50% - 66px)", right: "0" }}
       >
-        <h1 className="text-center md:text-right text-xl md:text-4xl lg:text-5xl xl:text-6xl font-bold ">
-          {data.site.siteMetadata.title}
-        </h1>
-        <h4 className="text-center md:text-right sm:text-lg md:text-xl lg:text-2xl xl:text-3xl ">
-          {data.site.siteMetadata.description}
-        </h4>
+        <div>
+          <h1 className="text-6xl font-bold">{data.site.siteMetadata.title}</h1>
+          <h4 className="text-2xl">{data.site.siteMetadata.description}</h4>
+        </div>
       </div>
     </div>
   );

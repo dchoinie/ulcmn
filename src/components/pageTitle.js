@@ -7,6 +7,10 @@ export class pageTitle extends Component {
     textColor: PropTypes.string
   };
 
+  static defaultProps = {
+    textColor: "#C53030"
+  };
+
   render() {
     return (
       <div className="text-center my-8">

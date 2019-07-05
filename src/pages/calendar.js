@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
+import Layout from "../components/layout";
 import PageTitle from "../components/pageTitle";
+import Background from "../images/positive.png";
 
 export class calendar extends Component {
   render() {
     return (
-      <>
-        <Header />
+      <Layout>
         <div className="container mx-auto my-8">
-          <PageTitle title="ULC Calendar" textColor="#C53030" />
+          <PageTitle title="ULC Calendar" />
           <iframe
             src="https://calendar.google.com/calendar/embed?src=3r1jansvntqs0fa1todhgqli1k%40group.calendar.google.com&ctz=America%2FChicago"
             style={{ border: "0" }}
@@ -20,7 +19,7 @@ export class calendar extends Component {
           ></iframe>
           <div className="row my-8 flex flex-col text-center md:flex-row bg-gray-300 p-10 shadow-lg">
             <div className="col w-auto md:w-2/4 my-4">
-              <h4 className="text-xl text-red-700 mb-4">
+              <h4 className="text-red-700 mb-4">
                 To add the ULC Calendar please use this link:
               </h4>
               <a
@@ -32,7 +31,7 @@ export class calendar extends Component {
               </a>
             </div>
             <div className="col w-auto md:w-2/4 my-4">
-              <h4 className="text-xl text-red-700 mb-4">
+              <h4 className="text-red-700 mb-4">
                 To add the LSF Calendar please use this link:
               </h4>
               <a
@@ -45,8 +44,7 @@ export class calendar extends Component {
             </div>
           </div>
         </div>
-        <Footer />
-      </>
+      </Layout>
     );
   }
 }

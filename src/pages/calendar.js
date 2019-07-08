@@ -17,7 +17,7 @@ export class calendar extends Component {
             frameborder={0}
             scrolling={"no"}
           ></iframe>
-          <div className="row my-8 flex flex-col text-center md:flex-row bg-gray-300 p-10 shadow-lg">
+          <div className="row my-8 flex flex-col text-center md:flex-row p-10 shadow-lg">
             <div className="col w-auto md:w-2/4 my-4">
               <h4 className="text-red-700 mb-4">
                 To add the ULC Calendar please use this link:
@@ -25,19 +25,21 @@ export class calendar extends Component {
               <a
                 href="https://calendar.google.com/calendar?cid=M3IxamFuc3ZudHFzMGZhMXRvZGhncWxpMWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
                 target="_blank"
-                className="bg-red-700 text-white p-2 rounded hover:bg-red-800"
+                className="text-white p-2 rounded hover:bg-red-800"
+                style={{ backgroundColor: "var(--red-main)" }}
               >
                 ULC Calendar
               </a>
             </div>
             <div className="col w-auto md:w-2/4 my-4">
-              <h4 className="text-red-700 mb-4">
+              <h4 className="mb-4" style={{ color: "var(--red-main)" }}>
                 To add the LSF Calendar please use this link:
               </h4>
               <a
                 href="https://calendar.google.com/calendar?cid=N3JwMTNyN2c0MjhqODF0OTU1MzNiYjRsZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
                 target="_blank"
-                className="bg-red-700 text-white p-2 rounded hover:bg-red-800"
+                className="text-white p-2 rounded hover:bg-red-800"
+                style={{ backgroundColor: "var(--red-main)" }}
               >
                 LSF Calendar
               </a>

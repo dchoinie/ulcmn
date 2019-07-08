@@ -1,20 +1,11 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React, { Component } from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import Logo from "../favicon.png";
+import Image from "../images/chapelInterior2.jpg";
 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "chapelInterior.jpg" }) {
-        childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixelss
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       site {
         siteMetadata {
           title
@@ -27,18 +18,30 @@ export default () => {
     }
   `);
   return (
-    <div className="container mx-auto py-24 text-center px-4">
-      <h2 className="text-3xl md:text-6xl font-black">Worship With Us</h2>
-      <img src={Logo} className="mx-auto my-4" style={{ maxWidth: "50px" }} />
-      <h2 className="text-xl md:text-3xl font-bold">
-        {data.site.siteMetadata.title}
-      </h2>
-      <h4 className="text-xl  text-red-700">
-        {data.site.siteMetadata.description}
-      </h4>
-      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.location}</h4>
-      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.address}</h4>
-      <h4 className="text-lg md:text-xl">{data.site.siteMetadata.time}</h4>
+    <div
+      className="container mx-auto my-12 flex p-12 justify-between rounded"
+      style={{ boxShadow: "5px 5px 15px var(--gray-light5)" }}
+    >
+      <div className="w-2/4 mx-6 text-right self-center">
+        <Link to="worship" className="hover:text-red-700">
+          <h2 className="text-5xl font-bold">Worship With Us</h2>
+        </Link>
+        <h3 style={{ color: "var(--red-main)" }}>
+          {data.site.siteMetadata.title}
+        </h3>
+        <h5>{data.site.siteMetadata.location}</h5>
+        <h5>{data.site.siteMetadata.address}</h5>
+        <hr style={{ borderTop: "1px solid var(--gray-main)" }} />
+        <h3>{data.site.siteMetadata.time}</h3>
+      </div>
+      <div className="w-2/4 mx-6">
+        <img
+          src={Image}
+          alt="Worship"
+          className="rounded"
+          style={{ boxShadow: "2px 2px 15px var(--gray-main)" }}
+        />
+      </div>
     </div>
   );
 };

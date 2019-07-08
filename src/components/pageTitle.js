@@ -8,18 +8,15 @@ export class pageTitle extends Component {
   };
 
   static defaultProps = {
-    textColor: "#C53030"
+    textColor: "var(--red-main)"
   };
 
   render() {
     return (
       <div className="text-center my-8">
-        <h2
-          className="text-4xl font-bold"
-          style={{ color: this.props.textColor }}
-        >
+        <h1 className="font-bold" style={{ color: this.props.textColor }}>
           {this.props.title}
-        </h2>
+        </h1>
       </div>
     );
   }

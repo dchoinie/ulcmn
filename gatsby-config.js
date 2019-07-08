@@ -5,7 +5,7 @@ module.exports = {
     author: `ULCMN`,
     location: `Graebner Memorial Chapel, Concorida University St. Paul`,
     address: `1259 Carrol Ave, St. Paul, MN 55104`,
-    time: `Sundays @ 10AM`,
+    time: `Sundays at 10:00 AM`,
     lutherHouseAddress: `316 10th Ave SE, Minneapolis, MN 55414`
   },
   plugins: [

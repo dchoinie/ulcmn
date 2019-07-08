@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Logo from "../../favicon.png";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
+import DropdownAbout from "../dropdownAbout";
+import DropdownSupport from "../dropdownSupport";
+import DropdownResources from "../dropdownResources";
 
 export class header extends Component {
   state = {
@@ -44,25 +47,28 @@ export class header extends Component {
           </Link>
           <ul className="flex mr-12">
             <Link to="/" className="z-40">
-              <li className="mx-2 cursor-pointer">About ULC</li>
+              <li className="mx-2 cursor-pointer">
+                <DropdownAbout />
+              </li>
             </Link>
             <Link to="/calendar" className="z-40">
               <li className="mx-2 cursor-pointer">Calendar</li>
             </Link>
             <Link to="/mapShuttle" className="z-40">
-              <li className="mx-2 cursor-pointer">Map & Shuttle</li>
+              <li className="mx-2 cursor-pointer">Map &#38; Shuttle</li>
             </Link>
             <Link to="/support" className="z-40">
-              <li className="mx-2 cursor-pointer">Support</li>
+              <li className="mx-2 cursor-pointer">
+                <DropdownSupport />
+              </li>
             </Link>
             <Link to="/resources" className="z-40">
-              <li className="mx-2 cursor-pointer">Resources</li>
+              <li className="mx-2 cursor-pointer">
+                <DropdownResources />
+              </li>
             </Link>
             <Link to="/library" className="z-40">
               <li className="mx-2 cursor-pointer">Library</li>
-            </Link>
-            <Link to="/construction" className="z-40">
-              <li className="mx-2 cursor-pointer">Construction</li>
             </Link>
             <a
               href="https://members.instantchurchdirectory.com/"

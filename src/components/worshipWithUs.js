@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Logo from "../favicon.png";
-import Image from "../images/chapelInterior2.jpg";
+import Img from "gatsby-image";
 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
+      file(relativePath: { eq: "chapelInterior2.jpg" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixelss
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -35,11 +43,9 @@ export default () => {
         <h3>{data.site.siteMetadata.time}</h3>
       </div>
       <div className="w-2/4 mx-6">
-        <img
-          src={Image}
-          alt="Worship"
-          className="rounded"
-          style={{ boxShadow: "2px 2px 15px var(--gray-main)" }}
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          className="shadow-xl rounded"
         />
       </div>
     </div>

@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 export class dropdownAbout extends Component {
   constructor() {
     super();
 
     this.state = {
-      displayMenu: false
+      displayMenu: false,
+      isArrowDown: true
     };
 
     this.showDropdownMenu = this.showDropdownMenu.bind(this);
@@ -15,22 +18,39 @@ export class dropdownAbout extends Component {
 
   showDropdownMenu(event) {
     event.preventDefault();
-    this.setState({ displayMenu: true }, () => {
+    this.setState({ displayMenu: true, isArrowDown: false }, () => {
       document.addEventListener("click", this.hideDropdownMenu);
+      console.log(this.showDropdownMenu);
     });
   }
 
   hideDropdownMenu() {
-    this.setState({ displayMenu: false }, () => {
+    this.setState({ displayMenu: false, isArrowDown: true }, () => {
       document.removeEventListener("click", this.hideDropdownMenu);
+      console.log(this.hideDropdownMenu);
     });
   }
 
   render() {
+    let dropdownArrow;
+    if (this.state.isArrowDown) {
+      dropdownArrow = (
+        <span className="self-center mx-1">
+          <FaAngleDown />
+        </span>
+      );
+    } else {
+      dropdownArrow = (
+        <span className="self-center mx-1">
+          <FaAngleUp />
+        </span>
+      );
+    }
+
     return (
       <div className="dropdown relative inline-block cursor-pointer">
-        <div className="button" onClick={this.showDropdownMenu}>
-          About ULC
+        <div className="button flex" onClick={this.showDropdownMenu}>
+          About ULC {dropdownArrow}
         </div>
         {this.state.displayMenu ? (
           <ul

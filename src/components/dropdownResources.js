@@ -67,10 +67,10 @@ export class dropdownResources extends Component {
               <Link to="/policies">ULC Policies</Link>
             </li>
             <li className="px-2 py-1">
-              <Link to="/chapel-council">Chapel Council</Link>
+              <Link to="/chapelCouncil">Chapel Council</Link>
             </li>
             <li className="px-2 py-1">
-              <Link to="/lutheran-resources">Lutheran Resources</Link>
+              <Link to="/lutheranResources">Lutheran Resources</Link>
             </li>
           </ul>
         ) : null}

@@ -6,7 +6,7 @@ export class footer extends Component {
     return (
       <div
         className="flex justify-between items-center text-white"
-        style={{ backgroundColor: "var(--gray-main)" }}
+        style={{ backgroundColor: "var(--gray-main)", overflowX: "hidden" }}
       >
         <div className="py-4 mx-12">
           <img

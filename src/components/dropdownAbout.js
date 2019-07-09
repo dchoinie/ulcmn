@@ -20,14 +20,12 @@ export class dropdownAbout extends Component {
     event.preventDefault();
     this.setState({ displayMenu: true, isArrowDown: false }, () => {
       document.addEventListener("click", this.hideDropdownMenu);
-      console.log(this.showDropdownMenu);
     });
   }
 
   hideDropdownMenu() {
     this.setState({ displayMenu: false, isArrowDown: true }, () => {
       document.removeEventListener("click", this.hideDropdownMenu);
-      console.log(this.hideDropdownMenu);
     });
   }
 
@@ -49,7 +47,11 @@ export class dropdownAbout extends Component {
 
     return (
       <div className="dropdown relative inline-block cursor-pointer">
-        <div className="button flex" onClick={this.showDropdownMenu}>
+        <div
+          className="button flex"
+          onClick={this.showDropdownMenu}
+          onMouseOver={this.mouseShowDropdownMenu}
+        >
           About ULC {dropdownArrow}
         </div>
         {this.state.displayMenu ? (

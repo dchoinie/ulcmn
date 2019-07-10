@@ -132,6 +132,10 @@ h5 {
   display: none;
 }
 
+#topnav a:hover {
+  color: var(--yellow-main);
+}
+
 @media screen and (max-width: 1024px) {
   #topnav a:not(.headerImg) {
     display: none;

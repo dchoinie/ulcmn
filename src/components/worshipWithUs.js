@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "chapelInterior2.jpg" }) {
+      file(relativePath: { eq: "graebner.jpg" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixelss
@@ -43,6 +43,7 @@ export default () => {
         <h3>{data.site.siteMetadata.time}</h3>
       </div>
       <div className="w-2/4 mx-6">
+        {/* Replace with image of finished chapel */}
         <Img
           fluid={data.file.childImageSharp.fluid}
           className="shadow-xl rounded"

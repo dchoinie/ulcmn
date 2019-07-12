@@ -26,27 +26,25 @@ export default () => {
     }
   `);
   return (
-    <div
-      className="container mx-auto my-12 flex p-12 justify-between rounded"
-      style={{ boxShadow: "5px 5px 15px var(--gray-light5)" }}
-    >
-      <div className="w-2/4 mx-6 text-right self-center">
+    <div className="container mx-auto my-12 p-6 rounded flex-row lg:flex lg:shadow-2xl lg:p-12">
+      <div className="w-full text-center mb-4 lg:text-right lg:self-center lg:mx-6 lg:w-2/4 lg:mb-0">
         <Link to="worship" className="hover:text-red-700">
-          <h2 className="text-5xl font-bold">Worship With Us</h2>
+          <h2 className="font-bold lg:text-5xl">Worship With Us</h2>
         </Link>
-        <h3 style={{ color: "var(--red-main)" }}>
+        <h4 className="lg:text-2xl" style={{ color: "var(--red-main)" }}>
           {data.site.siteMetadata.title}
-        </h3>
-        <h5>{data.site.siteMetadata.location}</h5>
-        <h5>{data.site.siteMetadata.address}</h5>
+        </h4>
+        <p>{data.site.siteMetadata.location}</p>
+        <p>{data.site.siteMetadata.address}</p>
         <hr style={{ borderTop: "1px solid var(--gray-main)" }} />
-        <h3>{data.site.siteMetadata.time}</h3>
+        <h4>{data.site.siteMetadata.time}</h4>
       </div>
-      <div className="w-2/4 mx-6">
+      <div className="w-full lg:w-2/4">
         {/* Replace with image of finished chapel */}
         <Img
           fluid={data.file.childImageSharp.fluid}
-          className="shadow-xl rounded"
+          className="rounded"
+          style={{ boxShadow: "1px 1px 5px var(--gray-dark)" }}
         />
       </div>
     </div>

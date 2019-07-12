@@ -136,6 +136,13 @@ h5 {
   color: var(--yellow-main);
 }
 
+#resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
 @media screen and (max-width: 1024px) {
   #topnav a:not(.headerImg) {
     display: none;

@@ -33,7 +33,7 @@ export default () => {
         style={{ top: "calc(50% - 68.28px)" }}
         id="heroDiv"
       >
-        <div className="text-center px-6 lg:text-right">
+        <div className="text-center px-6 lg:text-right lg:px-0">
           <h1 className="font-bold lg:text-6xl">
             {data.site.siteMetadata.title}
           </h1>

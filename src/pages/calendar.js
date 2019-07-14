@@ -6,7 +6,7 @@ export class calendar extends Component {
   render() {
     return (
       <Layout>
-        <div className="container mx-auto my-8">
+        <div className="container mx-auto my-8 px-4 lg:px-0">
           <PageTitle title="ULC Calendar" />
           <iframe
             src="https://calendar.google.com/calendar/embed?src=3r1jansvntqs0fa1todhgqli1k%40group.calendar.google.com&ctz=America%2FChicago"

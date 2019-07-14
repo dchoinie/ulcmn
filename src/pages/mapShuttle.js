@@ -21,7 +21,7 @@ export default () => {
   return (
     <Layout>
       <PageTitle title="Map &#38; Shuttle" />
-      <div className="text-center px-2 w-full md:w-2/4 mx-auto">
+      <div className="text-center px-4 w-full md:w-2/4 mx-auto lg:px-0">
         <h2>Sunday Shuttle Schedule</h2>
         <p className="text-lg">
           Catch a ride to our Sunday service at{" "}

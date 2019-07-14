@@ -71,6 +71,9 @@ export class dropdownAbout extends Component {
             <li className="px-2 py-1">
               <Link to="/history">History</Link>
             </li>
+            <li className="px-2 py-1">
+              <Link to="/lutherHouse">Luther House</Link>
+            </li>
           </ul>
         ) : null}
       </div>

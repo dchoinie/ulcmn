@@ -31,12 +31,12 @@ export default () => {
         <Link to="worship" className="hover:text-red-700">
           <h2 className="font-bold lg:text-5xl">Worship With Us</h2>
         </Link>
+        <hr style={{ borderTop: "1px solid var(--gray-main)" }} />
         <h4 className="lg:text-2xl" style={{ color: "var(--red-main)" }}>
           {data.site.siteMetadata.title}
         </h4>
         <p>{data.site.siteMetadata.location}</p>
         <p>{data.site.siteMetadata.address}</p>
-        <hr style={{ borderTop: "1px solid var(--gray-main)" }} />
         <h4>{data.site.siteMetadata.time}</h4>
       </div>
       <div className="w-full lg:w-2/4">

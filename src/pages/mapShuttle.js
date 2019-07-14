@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/layout";
 import { useStaticQuery, graphql } from "gatsby";
 import PageTitle from "../components/pageTitle";
-import Background from "../images/positive.png";
 
 export default () => {
   const data = useStaticQuery(graphql`

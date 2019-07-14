@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import Hero from "../images/hero.png";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -25,18 +26,22 @@ export default () => {
     }
   `);
   return (
-    <div className="relative" style={{ zIndex: "1", marginTop: "-66px" }}>
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        style={{ height: "100vh" }}
-      />
+    <div className="" style={{ marginTop: "-68.28px" }}>
+      <Img fluid={data.file.childImageSharp.fluid} className="h-screen" />
       <div
-        className="absolute text-white text-right px-12"
-        style={{ top: "calc(50% - 66px)", right: "0" }}
+        className="text-white"
+        style={{ top: "calc(50% - 68.28px)" }}
+        id="heroDiv"
       >
-        <div>
-          <h1 className="text-6xl font-bold">{data.site.siteMetadata.title}</h1>
-          <h4 className="text-2xl">{data.site.siteMetadata.description}</h4>
+        <div className="text-center px-6 lg:text-right">
+          <h1 className="font-bold lg:text-6xl">
+            {data.site.siteMetadata.title}
+          </h1>
+          <hr
+            className="md:hidden"
+            style={{ borderBottom: "1px solid white" }}
+          />
+          <h5 className="lg:text-2xl">{data.site.siteMetadata.description}</h5>
         </div>
       </div>
     </div>

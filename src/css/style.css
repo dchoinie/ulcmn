@@ -156,6 +156,34 @@ h5 {
   }
 }
 
+#homePageSupport {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+.supportImgOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #c53030;
+}
+
+.supportImgOverlayContainer {
+  position: relative;
+}
+
+.supportImgOverlayContainer:hover .supportImgOverlay {
+  opacity: 1;
+}
+
 #resourcesGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -52,7 +52,7 @@ export class dropdownResources extends Component {
         {this.state.displayMenu ? (
           <ul
             className="text-white text-center absolute z-10 p-2 whitespace-no-wrap"
-            style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+            style={{ backgroundColor: "rgba(0,0,0,0.5)", left: "-50%" }}
           >
             <li className="px-2 py-1">
               <Link to="/bulletin">Weekly Bulletin</Link>

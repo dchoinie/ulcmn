@@ -8,7 +8,7 @@ export class policies extends Component {
     return (
       <Layout>
         <PageTitle title="ULC Policies" />
-        <div className="container mx-auto">
+        <div className="container mx-auto my-12">
           <h3 className="text-center">
             Official Policies and Statements of University Lutheran Chapel
           </h3>

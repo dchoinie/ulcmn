@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import HeaderImg from "../images/ashes.jpg";
 
 export class pageTitle extends Component {
   static propTypes = {
@@ -8,13 +9,24 @@ export class pageTitle extends Component {
   };
 
   static defaultProps = {
-    textColor: "var(--red-main)"
+    textColor: "#fff"
   };
 
   render() {
     return (
-      <div className="text-center my-8">
-        <h1 className="font-bold" style={{ color: this.props.textColor }}>
+      <div
+        className="text-center flex justify-center"
+        style={{
+          backgroundImage: `url(${HeaderImg})`,
+          backgroundPosition: "top",
+          backgroundSize: "cover",
+          height: "400px"
+        }}
+      >
+        <h1
+          className="font-bold self-center lg:text-5xl tracking-wide"
+          style={{ color: this.props.textColor }}
+        >
           {this.props.title}
         </h1>
       </div>

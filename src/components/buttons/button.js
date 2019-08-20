@@ -24,7 +24,7 @@ export class button extends Component {
 
   render() {
     return (
-      <div className="flex my-6 cursor-pointer">
+      <div className="flex mt-3 cursor-pointer">
         <Link
           to={this.props.to}
           className="rounded px-4 py-2 capitalize leading-loose whitespace-no-wrap shadow-lg"

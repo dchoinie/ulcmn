@@ -77,18 +77,8 @@ export class support extends Component {
             explicabo quod. Veritatis laborum laboriosam debitis, accusamus
             aspernatur quam saepe dignissimos facere porro!
           </p>
-          <div className="flex">
-            <Button
-              to="build-it-back"
-              text="Build-It-Back"
-              marginRight="10px"
-            />
-            <Button
-              to="build-it-back"
-              text="Pipe Organ Fund"
-              marginRight="10px"
-            />
-            <Button to="build-it-back" text="General Fund" marginRight="10px" />
+          <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-start">
+            <Button to="support" text="Support ULC" />
           </div>
         </div>
       </div>

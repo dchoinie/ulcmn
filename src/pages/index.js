@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import About from "../components/about";
 import WorshipWithUs from "../components/worshipWithUs";
 import Support from "../components/support";
+import Resources from "../components/resources";
 import Footer from "../components/layout/footer";
 
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <About />
       <WorshipWithUs />
       <Support />
+      <Resources />
       <Footer />
     </>
   );

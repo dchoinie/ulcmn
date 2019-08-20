@@ -8,14 +8,18 @@ export class button extends Component {
     textColor: PropTypes.string,
     backgroundColor: PropTypes.string,
     text: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired
+    to: PropTypes.string.isRequired,
+    marginRight: PropTypes.string,
+    marginLeft: PropTypes.string
   };
 
   static defaultProps = {
     textColor: "#fff",
     backgroundColor: "var(--red-main)",
     text: "button",
-    to: "/"
+    to: "/",
+    marginRight: "0",
+    marginLeft: "0"
   };
 
   render() {
@@ -26,7 +30,9 @@ export class button extends Component {
           className="rounded px-4 py-2 capitalize leading-loose whitespace-no-wrap shadow-lg"
           style={{
             backgroundColor: this.props.backgroundColor,
-            color: this.props.textColor
+            color: this.props.textColor,
+            marginRight: this.props.marginRight,
+            marginLeft: this.props.marginLeft
           }}
         >
           <div className="flex items-center">

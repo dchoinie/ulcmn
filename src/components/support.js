@@ -40,7 +40,7 @@ export class support extends Component {
                 </div>
               </div>
             </div>
-            <div className="supportImgOverlayContainer cursor-pointer">
+            <div className="supportImgOverlayContainer cursor-pointer item3">
               <img
                 src={Support3}
                 alt="support3"
@@ -77,6 +77,19 @@ export class support extends Component {
             explicabo quod. Veritatis laborum laboriosam debitis, accusamus
             aspernatur quam saepe dignissimos facere porro!
           </p>
+          <div className="flex">
+            <Button
+              to="build-it-back"
+              text="Build-It-Back"
+              marginRight="10px"
+            />
+            <Button
+              to="build-it-back"
+              text="Pipe Organ Fund"
+              marginRight="10px"
+            />
+            <Button to="build-it-back" text="General Fund" marginRight="10px" />
+          </div>
         </div>
       </div>
     );

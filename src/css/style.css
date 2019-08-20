@@ -181,7 +181,7 @@ h5 {
 }
 
 .supportImgOverlayContainer:hover .supportImgOverlay {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 #resourcesGrid {
